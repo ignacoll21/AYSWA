@@ -102,16 +102,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+# SISTEMA/settings.py
 
-LANGUAGE_CODE = 'en-us'
+# Cambiamos el idioma de 'en-us' (inglés) a 'es-mx' (español de México)
+LANGUAGE_CODE = 'es-mx'
 
-TIME_ZONE = 'UTC'
+# Ajustamos la zona horaria para que las fechas sean correctas
+TIME_ZONE = 'America/Mexico_City'
 
-USE_I18N = True
-
-USE_L10N = True
-
-USE_TZ = True
+USE_I18N = True # Activa la internacionalización (traducción)
+USE_TZ = True   # Activa el uso de zonas horarias
 
 
 # Static files (CSS, JavaScript, Images)
@@ -123,3 +123,14 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# SISTEMA/settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'alumnos',  # <--- AGREGA ESTA LÍNEA AQUÍ
+]

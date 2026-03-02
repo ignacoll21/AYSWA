@@ -1,21 +1,11 @@
-"""SISTEMA URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path
+from django.contrib import admin # Importa el panel de admin
+from django.urls import path # Importa la herramienta para crear rutas
+from alumnos.views import reporte_escolar # Importa la lógica que acabas de escribir
 
 urlpatterns = [
+    # Dirección para gestionar los datos (ej: 127.0.0.1:8000/admin/)
     path('admin/', admin.site.urls),
+    
+    # Dirección para ver el reporte (ej: 127.0.0.1:8000/reporte/)
+    path('reporte/', reporte_escolar),
 ]
