@@ -1,12 +1,23 @@
-# Entorno virtual
-venv/
-
-# Base de datos
-db.sqlite3
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Django
+db.sqlite3
+*.sqlite3
+SISTEMA/db.sqlite3
+/media
+/staticfiles
+
+# Entornos virtuales
+venv/
+env/
+.env
+
+# VS Code
+.vscode/
 
 # Archivos de sistema
 .DS_Store
